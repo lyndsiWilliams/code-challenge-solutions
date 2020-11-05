@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["HackerRank/birthdayCakeCandles.py"]
+            "args": ["Leetcode/subsets.py"]
         }
     ]
 }
