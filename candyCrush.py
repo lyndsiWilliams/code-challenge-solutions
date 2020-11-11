@@ -7,19 +7,19 @@ def remove_dups(str):
 
   while idx < len(str):
 
-    '''-Initiate length check-
+    '''-Conditional length check and recursion-
     If the length of cur_dup == 0 then this it's empty,
       this iteration is the initial value.
     Otherwise, check if this iteration == the first character
-      of cur_dup. If so, add value to the cur_dup string'''
+      of cur_dup. If so, add value to the cur_dup string
+    If this iteration != cur_dup[0], check cur_dup's length
+      If > 3, take parameter string - cur_dup and recursively pass it through again
+      If not, no removal needed so add this iteration as the new initiatal value'''
     if len(cur_dup) == 0:
       cur_dup = str[idx]
     else:
       if str[idx] == cur_dup[0]:
         cur_dup += str[idx]
-      '''If this iteration != cur_dup[0], check cur_dup's length
-      If > 3, take parameter string - cur_dup and recursively pass it through again
-      If not, no removal needed so add this iteration as the new initiatal value'''
       else:
         if len(cur_dup) > 2:
           start = idx - len(cur_dup)
