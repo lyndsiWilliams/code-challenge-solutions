@@ -1,9 +1,12 @@
 def staircase(n):
-    for i in range(n+1):
-        if i == 0:
-            continue
-        else:
-            print(('#' * i).rjust(n))
+    for i in range(n):  # O(N)
+        print(('#' * (i+1)).rjust(n))  # +1 removes 0    ---look into printf---
 
 # Example
 staircase(6)
+
+
+'''
+Time: O(N)
+Space: O(1)
+'''
